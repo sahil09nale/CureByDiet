@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptom Analyzer</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cure by Diet: Symptom Analyzer</h1>
+        <p class="subtitle">Select your symptoms below to get an analysis of possible conditions, diet plans, and lifestyle recommendations.</p>
+        
+        <form id="symptomForm">
+            <div class="form-group">
+                <label for="symptoms">Select your symptoms (Hold Ctrl/Cmd to select multiple):</label>
+                <select id="symptoms" multiple>
+                    <option value="fatigue">Fatigue</option>
+                    <option value="unexplained weight loss">Unexplained Weight Loss</option>
+                    <option value="fever">Fever</option>
+                    <option value="night sweats">Night Sweats</option>
+                    <option value="loss of appetite">Loss of Appetite</option>
+                    <option value="chest pain">Chest Pain</option>
+                    <option value="shortness of breath">Shortness of Breath</option>
+                    <option value="irregular heartbeat">Irregular Heartbeat</option>
+                    <option value="swelling in ankles or legs">Swelling in Ankles or Legs</option>
+                    <option value="persistent cough">Persistent Cough</option>
+                    <option value="wheezing">Wheezing</option>
+                    <option value="difficulty breathing">Difficulty Breathing</option>
+                    <option value="productive cough">Productive Cough</option>
+                    <option value="dry cough">Dry Cough</option>
+                    <option value="nausea">Nausea</option>
+                    <option value="diarrhea">Diarrhea</option>
+                    <option value="constipation">Constipation</option>
+                    <option value="abdominal pain">Abdominal Pain</option>
+                    <option value="frequent urination">Frequent Urination</option>
+                    <option value="painful urination">Painful Urination</option>
+                    <option value="blood in urine">Blood in Urine</option>
+                    <option value="tobacco use">Tobacco Use</option>
+                    <option value="alcohol consumption">Alcohol Consumption</option>
+                    <option value="anxiety">Anxiety</option>
+                    <option value="depression">Depression</option>
+                    <option value="mood swings">Mood Swings</option>
+                </select>
+            </div>
+
+            <div id="selectedSymptomsDisplay">
+                <strong>Selected:</strong> <span>None</span>
+            </div>
+
+            <div class="button-group">
+                <button type="button" id="analyzeBtn" class="btn btn-primary">
+                    <i>🔍</i> Analyze Symptoms
+                </button>
+                <button type="button" id="clearBtn" class="btn btn-secondary">
+                    <i>🗑️</i> Clear
+                </button>
+            </div>
+
+            <div id="loadingSpinner" class="spinner" style="display: none;"></div>
+        </form>
+    </div>
+
+    <script src="../js/question.js"></script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+/* General Body & Container Styling */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h1, h2, h3, h4, h5 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle, .disclaimer {
+    text-align: center;
+    color: #555;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.disclaimer {
+    background-color: #fffbe6;
+    border: 1px solid #ffe58f;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+/* Form Styling (question.html) */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #34495e;
+}
+
+#symptoms {
+    width: 100%;
+    height: 250px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#selectedSymptomsDisplay {
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* Button Styling */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.btn-secondary {
+    background-color: #7f8c8d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #6c7a7b;
+}
+
+/* Spinner */
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #3498db;
+    animation: spin 1s ease infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Report Styling (result.html) */
+.symptom-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.tag {
+    background-color: #ecf0f1;
+    color: #34495e;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+}
+
+.tag-matched {
+    background-color: #d4edda; /* Light green */
+    color: #155724;
+    font-weight: 500;
+}
+
+.disease-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.disease-card h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.match-percentage {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #27ae60;
+    background-color: #e9f7ef;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.card-section {
+    margin-bottom: 1.5rem;
+}
+.card-section:last-child {
+    margin-bottom: 0;
+}
+.card-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.card-section li {
+    padding: 5px 0 5px 25px;
+    position: relative;
+}
+
+.card-section li::before {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    content: '›';
+    color: #3498db;
+    font-weight: bold;
+}
+
+.diet-plan h5 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.diet-plan .icon-rec { color: #2ecc71; }
+.diet-plan .icon-avoid { color: #e74c3c; }
+
+.diet-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.diet-columns ul { margin-top: 0.5rem; }
+
+li.recommended::before { content: '✔️'; color: #2ecc71; top: 6px; }
+li.avoid::before { content: '❌'; color: #e74c3c; top: 6px; }
+
+.meal-timing {
+    margin-top: 1rem;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-left: 4px solid #3498db;
+    font-size: 0.9em;
+}
+
+.error {
+    color: #c0392b;
+    font-weight: bold;
+    text-align: center;
+}
+/* --- All the previous CSS from the last answer goes here --- */
+
+/* General Body & Container Styling */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h1, h2, h3, h4, h5 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/* Styling for the new Report Info */
+#reportInfo {
+    text-align: center;
+    color: #555;
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+#reportInfo p {
+    margin: 0;
+}
+
+
+/* --- Button Styling (existing) --- */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+/* ... etc. ... */
+
+
+/* --- Report Styling (existing) --- */
+.symptom-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+}
+/* ... etc. ... */
+
+
+@media print {
+    body {
+        background-color: #fff;
+        color: #000;
+        font-size: 11pt; /* Use points for better print scaling */
+        padding: 0;
+        margin: 1in; /* Standard print margin */
+    }
+
+    .container {
+        max-width: 100%;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+    }
+
+    /* Hide elements that shouldn't be printed */
+    .button-group, .disclaimer {
+        display: none !important;
+    }
+
+    h1, h2, h3 {
+        color: #000;
+    }
+
+    .disease-card {
+        page-break-inside: avoid; /* Prevents a card from splitting across two pages */
+        box-shadow: none;
+        border: 1px solid #ccc; /* Add a simple border for printed version */
+        margin-top: 1.5rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000; /* Make links black */
+    }
+    
+    .match-percentage {
+        background-color: #eee !important; /* Use grayscale for backgrounds */
+        color: #000 !important;
+        border: 1px solid #ccc;
+        padding: 3px 8px;
+    }
+    
+    .tag {
+        border: 1px solid #999;
+        background-color: #f0f0f0 !important;
+        color: #000 !important;
+    }
+
+    .diet-columns {
+        grid-template-columns: 1fr 1fr; /* Keep the two-column layout */
+    }
+}

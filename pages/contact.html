@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - CureByDiet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/contact.css">
+</head>
+<body>
+
+  <header>
+    <h1>Contact Us - CureByDiet</h1>
+  </header>
+
+  <main>
+    <h2>We'd Love to Hear From You</h2>
+    <form id="contactForm">
+      <div>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" required />
+      </div>
+
+      <div>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" required />
+      </div>
+
+      <div>
+        <label for="message">Your Message:</label>
+        <textarea id="message" rows="5" required></textarea>
+      </div>
+
+      <button type="submit">Send Message</button>
+
+      <div class="success" id="successMsg">Thank you! We'll get back to you soon.</div>
+      <div class="error" id="errorMsg">Please fill out all fields correctly.</div>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CureByDiet. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/contact.js"></script>
+
+</body>
+</html>
