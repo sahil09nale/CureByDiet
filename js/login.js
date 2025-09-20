@@ -29,7 +29,7 @@
         if (storedUser && storedUser.email === email && storedUser.password === password) {
           document.getElementById("loginSuccessModal").style.display = "flex";
           setTimeout(() => {
-            window.location.href = "/home";
+            window.location.href = "home.html";
           }, 1500);
         } else {
           loginErrorMessage.textContent = "Invalid email or password.";
