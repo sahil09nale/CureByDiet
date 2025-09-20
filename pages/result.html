@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptom Analysis Report</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">CureByDiet</div>
+        <nav>
+            <a href="home.html">Home</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Symptom Analysis</h1>
+        <div id="reportInfo">
+            <!-- Date and time will be injected here by result.js -->
+        </div>
+
+        <div class="disclaimer">
+            <strong>Disclaimer:</strong> This tool is for informational purposes only and does not constitute medical advice. Please consult a healthcare professional for any health concerns.
+        </div>
+        
+        <div id="userSymptoms">
+            <h2>Your Selected Symptoms</h2>
+            <div class="symptom-tags">
+                <!-- Selected symptoms will be injected here by result.js -->
+            </div>
+        </div>
+
+        <div id="resultsArea">
+            <!-- Analysis results will be injected here by result.js -->
+        </div>
+
+        <div class="button-group">
+            <button type="button" id="printBtn" class="btn btn-primary"><i>🖨️</i> Print Report</button>
+            <a href="question.html" class="btn btn-secondary"><i>⬅️</i> Back to Selector</a>
+        </div>
+    </div>
+
+    <!-- The database and logic are in result.js -->
+    <script src="../js/result.js"></script>
+</body>
+</html>

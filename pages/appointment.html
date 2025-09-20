@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Appointment | CureByDiet</title>
+
+  <!-- External Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles/appointment.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <i class="fas fa-heartbeat"></i> CureByDiet
+    </div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="about us.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="appointment-container">
+      <h2>Book an Appointment</h2>
+
+      <div class="success-message" id="successMessage">
+        <i class="fas fa-check-circle"></i> Your appointment has been booked successfully! We'll contact you shortly to confirm.
+      </div>
+
+      <form id="appointmentForm" action="#" method="POST">
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Preferred Date:</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="time">Preferred Time:</label>
+            <select id="time" name="time" required>
+              <option value="">Select a time</option>
+              <option>09:00 AM</option>
+              <option>10:00 AM</option>
+              <option>11:00 AM</option>
+              <option>12:00 PM</option>
+              <option>01:00 PM</option>
+              <option>02:00 PM</option>
+              <option>03:00 PM</option>
+              <option>04:00 PM</option>
+              <option>05:00 PM</option>
+              <option>06:00 PM</option>
+              <option>07:00 PM</option>
+              <option>08:00 PM</option>
+              <option>09:00 PM</option>
+            </select>
+          </div>
+          
+
+        <div class="form-group">
+          <label for="doctor">Select Doctor:</label>
+          <select id="doctor" name="doctor" required>
+            <option value="">Select a doctor</option>
+
+            <optgroup label="General Physicians">
+              <option>Dr. Anand Joshi - General Physician (Ruby Hall Clinic)</option>
+              <option>Dr. Meera Deshpande - General Physician (Jehangir Hospital)</option>
+              <option>Dr. Rajiv Kulkarni - General Physician (Sahyadri Hospital)</option>
+              <option>Dr. Priya Kale - General Physician (Dinanath Mangeshkar Hospital)</option>
+              <option>Dr. Sanjay Patil - General Physician (KEM Hospital)</option>
+            </optgroup>
+
+            <optgroup label="Cardiologists">
+              <option>Dr. Sameer Dani - Cardiologist (Apollo Hospital)</option>
+              <option>Dr. Manoj Durairaj - Cardiologist (Ruby Hall Clinic)</option>
+              <option>Dr. H.K. Chopra - Cardiologist (Sahyadri Hospital)</option>
+              <option>Dr. Abhijit Vilas Kulkarni - Cardiologist (Jehangir Hospital)</option>
+              <option>Dr. Suresh Vijan - Cardiologist (Columbia Asia Hospital)</option>
+            </optgroup>
+
+            <optgroup label="Nutritionists/Dietitians">
+              <option>Dr. Shilpa Joshi - Nutritionist (Pune Nutrition Clinic)</option>
+              <option>Dr. Anjali Pradhan - Dietitian (Aditya Birla Memorial Hospital)</option>
+              <option>Dr. Rujuta Diwekar - Nutritionist (Pune)</option>
+              <option>Dr. Pradnya Kulkarni - Clinical Nutritionist (Ruby Hall Clinic)</option>
+              <option>Dr. Supriya Kulkarni - Dietitian (Sahyadri Hospital)</option>
+            </optgroup>
+
+            <optgroup label="Endocrinologists (Diabetes Specialists)">
+              <option>Dr. Shashank Joshi - Endocrinologist (Lilavati Hospital, Pune)</option>
+              <option>Dr. Anil Bhoraskar - Diabetologist (Ruby Hall Clinic)</option>
+              <option>Dr. Charudatta Joglekar - Endocrinologist (Sahyadri Hospital)</option>
+              <option>Dr. Sunil Mhaske - Diabetologist (KEM Hospital)</option>
+              <option>Dr. Rajiv Kovil - Diabetologist (Apollo Hospital)</option>
+            </optgroup>
+
+            <optgroup label="Gastroenterologists">
+              <option>Dr. Amit Phadnis - Gastroenterologist (Jehangir Hospital)</option>
+              <option>Dr. Vinay Dhir - Gastroenterologist (Ruby Hall Clinic)</option>
+              <option>Dr. Nikhil Bondre - Gastroenterologist (Sahyadri Hospital)</option>
+              <option>Dr. Sameer Desai - Gastroenterologist (Apollo Hospital)</option>
+              <option>Dr. Snehal Sriram - Gastroenterologist (KEM Hospital)</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="bookBtn">Book Appointment</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    CureByDiet &copy; 2025
+  </footer>
+
+  <script src="../js/appointment.js"></script>
+</body>
+</html>
