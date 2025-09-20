@@ -14,14 +14,6 @@
 * 🚑 **Emergency Support:** Quick link to emergency services.
 * 👨‍⚕️ **Appointment Booking:** Integrated booking system for healthcare professionals.
 
-## 🗄️ Database Schema
-
-### Tables:
-* **Diseases**: Stores disease information.
-* **Symptoms**: Stores symptom entries.
-* **DiseaseSymptoms**: Many-to-many mapping between diseases and symptoms.
-* **DietPlans**: Contains disease-specific diet, lifestyle changes, and preventive measures.
-
 ## 🎯 Usage
 
 1. **Register/Login** using the authentication system.
@@ -37,6 +29,12 @@
 * 📊 **User Dashboard** with history of symptoms and consultations.
 * 🎁 **Reward System** for healthy lifestyle tracking.
 * ⌚ **Integration with Wearables** (smartwatches, fitness trackers).
+
+## Tech Stack Used
+
+* HTML
+* JAVASCRIPT
+* CSS
 
 ## 🤝 Contribution Guidelines
 
