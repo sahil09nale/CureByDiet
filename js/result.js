@@ -508,7 +508,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- NEW: Add Report Generation Date & Time ---
     const now = new Date();
     const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
-    reportInfoDiv.innerHTML = `<p><strong>Report Generated:</strong> ${now.toLocaleString(undefined, options)}</p>`;
+    const currentUser = localStorage.getItem('currentUser');
+    const userInfo = currentUser ? `<p><strong>Patient:</strong> ${currentUser}</p>` : '';
+    reportInfoDiv.innerHTML = `${userInfo}<p><strong>Report Generated:</strong> ${now.toLocaleString(undefined, options)}</p>`;
 
     // --- NEW: Add Print Button Functionality ---
     printBtn.addEventListener('click', () => {

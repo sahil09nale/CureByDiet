@@ -32,4 +32,18 @@
         document.querySelector('.cta-button').addEventListener('click', () => {
             alert('Welcome to CureByDiet! Please login or sign up to continue.');
         });
+
+        // Display username
+        const currentUser = localStorage.getItem('currentUser');
+        if (currentUser) {
+            document.getElementById('username').textContent = `Welcome, ${currentUser}`;
+        }
+
+        // Logout functionality
+        document.querySelector('a[href="/"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.removeItem('currentUser');
+            localStorage.removeItem('registeredUser');
+            window.location.href = 'login.html';
+        });
     

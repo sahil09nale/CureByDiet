@@ -6,72 +6,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CureByDiet - Personalized Health Solutions</title>
     <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav>
-        <div class="logo">CureByDiet</div>
+        <div class="logo">
+            <i class="fas fa-heartbeat"></i>
+            CureByDiet
+        </div>
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="about us.html">About Us</a></li>
             <li><a href="help.html">Help</a></li>
+            <li><span id="username" style="color: #e0f2f1; margin-right: 1rem;"></span></li>
             <li><a href="/">Logout</a></li>
         </ul>
     </nav>
 
-    <header class="landing">
-        <h2>"Your Health, Your Greatest Wealth"</h2>
-        <p>"Let food be thy medicine and medicine be thy food." - Hippocrates</p>
-        <p>Your journey towards a healthier life starts here. Discover the power of a balanced diet and proactive healthcare to live a disease-free and energetic life.</p>
-        <p>Take charge of your well-being with science-backed insights, personalized diet plans, and easy access to healthcare experts.</p>
-    </header>
-
-    
-
     <!-- Hero Section -->
-    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Health, Your Greatest Wealth</h1>
+            <p class="hero-quote">"Let food be thy medicine and medicine be thy food." - Hippocrates</p>
+            <p class="hero-description">Transform your health with personalized nutrition and expert healthcare guidance. Start your journey to a healthier, happier you today.</p>
+            <div class="hero-buttons">
+                <a href="question.html" class="cta-primary">Start Health Assessment</a>
+                <a href="about us.html" class="cta-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="../assets/analysis.jpg" alt="Health Assessment">
+        </div>
+    </section>
 
-  <!-- Replace the features section with this -->
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stat-item">
+            <div class="stat-number">10K+</div>
+            <div class="stat-label">Happy Patients</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">95%</div>
+            <div class="stat-label">Success Rate</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Support</div>
+        </div>
+    </section>
+
   <main>
-      <section class="block-container">
-          <!-- Replace the image tags with direct paths -->
-          <div class="block">
-              <img src="../assets/analysis.jpg" alt="Health Analysis">
-              <div class="text">
-                  <h2>Personalized Health Analysis</h2>
-                  <p>Begin by answering our comprehensive health questionnaire. We delve deep into your symptoms, lifestyle, and medical history.</p>
-                  <a href="question.html" class="btn">Begin Assessment</a>
-              </div>
+      <!-- Features Section -->
+      <section class="features">
+          <div class="section-header">
+              <h2>Complete Healthcare Solutions</h2>
+              <p>Everything you need for better health in one place</p>
           </div>
           
-          <div class="block">
-              <img src="../assets/diet2.png" alt="Diet Plan">
-              <div class="text">
-                  <h2>Tailored Diet Plans for Better Health</h2>
-                  <p>Say goodbye to generic diets! Our nutritionists create personalized meal plans based on your health goals. No more guesswork—just delicious, nourishing meals.</p>
-                  <a href="dietplan.html" class="btn">Get Diet Plan</a>
+          <div class="features-grid">
+              <div class="feature-card">
+                  <div class="feature-image">
+                      <img src="../assets/analysis.jpg" alt="Health Analysis">
+                  </div>
+                  <div class="feature-content">
+                      <h3>Personalized Health Analysis</h3>
+                      <p>Begin by answering our comprehensive health questionnaire. We delve deep into your symptoms, lifestyle, and medical history.</p>
+                      <a href="question.html" class="feature-btn">Begin Assessment</a>
+                  </div>
+              </div>
+              
+              <div class="feature-card">
+                  <div class="feature-image">
+                      <img src="../assets/diet2.png" alt="Diet Plan">
+                  </div>
+                  <div class="feature-content">
+                      <h3>Tailored Diet Plans</h3>
+                      <p>Say goodbye to generic diets! Our nutritionists create personalized meal plans based on your health goals.</p>
+                      <a href="dietplan.html" class="feature-btn">Get Diet Plan</a>
+                  </div>
+              </div>
+              
+              <div class="feature-card">
+                  <div class="feature-image">
+                      <img src="../assets/consult2.jpg" alt="Doctor Appointment">
+                  </div>
+                  <div class="feature-content">
+                      <h3>Book Doctor's Appointment</h3>
+                      <p>Take control of your health by scheduling an appointment with a trusted healthcare professional.</p>
+                      <a href="appointment.html" class="feature-btn">Book Appointment</a>
+                  </div>
+              </div>
+              
+              <div class="feature-card">
+                  <div class="feature-image">
+                      <img src="../assets/empower.png" alt="Health Priority">
+                  </div>
+                  <div class="feature-content">
+                      <h3>Your Health, Your Priority</h3>
+                      <p>Explore insightful articles on early symptom detection and proactive healthcare solutions.</p>
+                      <a href="article.html" class="feature-btn">Explore Articles</a>
+                  </div>
               </div>
           </div>
-  
-          <div class="block">
-              <img src="../assets/consult2.jpg" alt="Doctor Appointment">
-              <div class="text">
-                  <h2>Book Your Doctor's Appointment</h2>
-                  <p>Take control of your health by scheduling an appointment with a trusted healthcare professional. Your well-being is our priority!</p>
-                  <a href="appointment.html" class="btn">Book Appointment</a>
-              </div>
-          </div>
-  
-          <div class="block">
-              <img src="../assets/empower.png" alt="Health Priority">
-              <div class="text">
-                  <h2>Your Health, Your Priority</h2>
-                  <p>Explore insightful articles on early symptom detection and proactive healthcare solutions. Take charge of your health today for a stronger, healthier tomorrow.</p>
-                  <a href="article.html" class="btn">Explore Articles</a>
-              </div>
-          </div>
-      
-    </section>
+      </section>
 
     <!-- Footer -->
     <footer id="about-section">
@@ -107,9 +146,6 @@
     </footer>
 
     <script src="../js/home.js"></script>
-</body>
-
-    
     </main>
 </body>
 </html>

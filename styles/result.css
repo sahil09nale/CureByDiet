@@ -221,8 +221,22 @@
             }
         }
     
-/* Header styles */
-header {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 80px;
+}
+
+/* Navigation Bar */
+nav {
     background-color: #2c8a7d;
     color: white;
     padding: 1rem 2rem;
@@ -230,22 +244,312 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
-header .logo {
+.logo {
     font-size: 1.8rem;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-header nav a {
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: color 0.3s;
 }
 
-header nav a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+.nav-links a:hover {
+    color: #e0f2f1;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+h1 {
+    color: #2c8a7d;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    color: #2c8a7d;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+#reportInfo {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.disclaimer {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    color: #856404;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#userSymptoms {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.symptom-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tag {
+    background: #e0f2f1;
+    color: #2c8a7d;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.tag-matched {
+    background: #2c8a7d;
+    color: white;
+}
+
+#resultsArea {
+    margin-bottom: 2rem;
+}
+
+.disease-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #2c8a7d;
+}
+
+.disease-card h3 {
+    color: #2c8a7d;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+}
+
+.match-percentage {
+    background: #e74c3c;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.card-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.card-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.card-section h4 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.diet-plan {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.diet-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.diet-column h5 {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.diet-column ul {
+    list-style: none;
+}
+
+.diet-column li {
+    padding: 0.3rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.recommended {
+    color: #27ae60;
+}
+
+.avoid {
+    color: #e74c3c;
+}
+
+.meal-timing {
+    background: #e0f2f1;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    color: #2c8a7d;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #2c8a7d, #1e6b5e);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(44, 138, 125, 0.3);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+}
+
+@media print {
+    nav, .button-group {
+        display: none !important;
+    }
+    
+    body {
+        padding-top: 0;
+        background: white;
+        color: black;
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    .container {
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+    }
+    
+    .disease-card {
+        page-break-inside: avoid;
+        border: 1px solid #ccc;
+        margin-bottom: 1rem;
+        box-shadow: none;
+    }
+    
+    .tag {
+        border: 1px solid #2c8a7d;
+        background: white !important;
+        color: #2c8a7d !important;
+    }
+    
+    h1, h2, h3 {
+        color: black !important;
+    }
+    
+    .match-percentage {
+        background: #ccc !important;
+        color: black !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+    
+    .diet-columns {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .nav-links {
+        display: none;
+    }
 }

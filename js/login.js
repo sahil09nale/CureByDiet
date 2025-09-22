@@ -27,6 +27,7 @@
         const storedUser = JSON.parse(localStorage.getItem("registeredUser"));
 
         if (storedUser && storedUser.email === email && storedUser.password === password) {
+          localStorage.setItem("currentUser", storedUser.name);
           document.getElementById("loginSuccessModal").style.display = "flex";
           setTimeout(() => {
             window.location.href = "home.html";

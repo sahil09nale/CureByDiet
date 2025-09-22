@@ -25,8 +25,9 @@
         }
 
         // Store user credentials in localStorage
-        const user = { email: email, password: password };
+        const user = { name: name, email: email, password: password };
         localStorage.setItem("registeredUser", JSON.stringify(user));
+        localStorage.setItem("currentUser", name);
 
         // Simulated success
         document.getElementById("signupSuccessModal").style.display = "flex";
