@@ -24,6 +24,18 @@
           return;
         }
 
+        if (password.length < 6) {
+          errorMessage.textContent = "Password must be at least 6 characters.";
+          errorMessage.style.display = "block";
+          return;
+        }
+
+        if (!/\S+@\S+\.\S+/.test(email)) {
+          errorMessage.textContent = "Please enter a valid email address.";
+          errorMessage.style.display = "block";
+          return;
+        }
+
         // Store user credentials in localStorage
         const user = { name: name, email: email, password: password };
         localStorage.setItem("registeredUser", JSON.stringify(user));

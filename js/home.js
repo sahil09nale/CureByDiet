@@ -46,4 +46,10 @@
             localStorage.removeItem('registeredUser');
             window.location.href = 'login.html';
         });
+
+        // Mobile menu toggle
+        window.toggleMenu = function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        };
     

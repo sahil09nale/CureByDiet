@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CureByDiet - Welcome</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Arial', sans-serif; 
+            background: linear-gradient(135deg, #2c8a7d, #1e6b5e);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .welcome-container {
+            text-align: center;
+            max-width: 500px;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        h1 { font-size: 3rem; margin-bottom: 1rem; }
+        p { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9; }
+        .btn-group { display: flex; gap: 1rem; justify-content: center; }
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn-primary { background: white; color: #2c8a7d; }
+        .btn-secondary { background: transparent; color: white; border: 2px solid white; }
+        .btn:hover { transform: translateY(-2px); }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <h1>CureByDiet</h1>
+        <p>Your journey to better health starts here</p>
+        <div class="btn-group">
+            <a href="pages/login.html" class="btn btn-primary">Login</a>
+            <a href="pages/registration.html" class="btn btn-secondary">Sign Up</a>
+        </div>
+    </div>
+</body>
+</html>
