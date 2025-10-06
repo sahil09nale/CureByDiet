@@ -1,8 +1,7 @@
 // API Configuration
 // Replace these with your actual API keys
 const API_KEYS = {
-    GEMINI: 'AIzaSyDuprbGf6yj9586C5jzr1p87oxrWBA8fiQ',
-    PERPLEXITY: 'YOUR_PERPLEXITY_API_KEY_HERE'
+    GEMINI: 'AIzaSyDuprbGf6yj9586C5jzr1p87oxrWBA8fiQ'
 };
 
 // Export for use in other files
